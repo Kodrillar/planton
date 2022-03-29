@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Planton</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header>
+       <div class="forHead">
+        <nav>
+        <ul class="navlist">
+         <div class="navlistitem">
+
+         <div class="navbutton btn btn-primary"> <li class="navitem"><a href="#login_button">Get started</a></li> </div>
+         <div class="navbutton btn btn-primary">  <li class="navitem"><a href="https://github.com/Kodrillar/planton">About Planton</a></li></div>
+          
+         </div>
+        </ul>
+        <h1 class="welcome_text">Welcome to Planton!</h1>
+        <button id="login_button" class="btn btn-primary">
+          Sign in with Metamask
+        </button>
+    
+        <button id="logout_button" class="btn btn-secondary">
+          Log out from Metamask
+        </button>
+      </nav>
+    </div>
+
+    </header>
+    <div class="container">
+     
+      <div id="game">
+        <div class="row" id="plant_row">
+          
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>

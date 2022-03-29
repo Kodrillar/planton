@@ -1,0 +1,25 @@
+{
+  "name": "planton",
+  "version": "1.0.0",
+  "description": "A NFT game making use of solidity, truffle, ganache and moralis",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "solidity",
+    "NFT",
+    "game",
+    "truffle",
+    "ganache"
+  ],
+  "author": "David Ipadeola",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "@truffle/hdwallet-provider": "^2.0.4",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.1",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
