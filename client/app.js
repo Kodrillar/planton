@@ -1,12 +1,15 @@
 const web3 = new Web3(window.ethereum);
-const serverUrl = "<YOUR_MORALIS_SERVER _URL>" ;
-const appId = "<YOUR_MORALIS_APP_ID>";
+const serverUrl = "https://4icglbnazhgm.usemoralis.com:2053/server" ;
+const appId = "Nhd2twndsU0rZF6sth55ZFsdX24FwQJXFSBqZP8o";
 Moralis.start({ serverUrl, appId });
 
 //this is my local contract address, add yours
-const CONTRACT_ADDRESS = "0x4E7487D3E04543B7b4c87BB1897138a9D378a391";
+const CONTRACT_ADDRESS = "0x1d2bf0626339E86c0f9F139926aEFEF9dE0C93E7"
+
+// "0x4E7487D3E04543B7b4c87BB1897138a9D378a391";
 
 let user = Moralis.User.current();
+console.log(user);
 
 async function login() {
  $("#logout_button").hide();
@@ -35,7 +38,7 @@ async function login() {
 }
 
 async function renderPlantonGame(){
-    $("#login_button").hide();
+    // $("#login_button").hide();
      $("#plant_row").html("");
 
     let plantId = 0;
@@ -43,10 +46,11 @@ async function renderPlantonGame(){
     let abi = await getAbi();
     let contract = new web3.eth.Contract(abi, CONTRACT_ADDRESS);
                                                             // Should be ethereum.selectedAddress
-    let listOfTokens = await contract.methods.getAllTokensForUser('0xc274F1773Fd5416B9c204397d920D58d85e0F21e').call({from:'0xc274F1773Fd5416B9c204397d920D58d85e0F21e'});
+    let listOfTokens = await contract.methods.getAllTokensForUser("0xf43994861B443C6ed59B227433f1B76c4DC3FB62").call({from:ethereum.selectedAddress});
     if(listOfTokens.length == 0) return;
+    console.log(listOfTokens);
     listOfTokens.forEach(async plantId => {
-        let tokenDetails = await contract.methods.getTokenDetails(plantId).call({from:'0xc274F1773Fd5416B9c204397d920D58d85e0F21e'});
+        let tokenDetails = await contract.methods.getTokenDetails(plantId).call({from:ethereum.selectedAddress});
         console.log(tokenDetails);
     renderPlant(plantId, tokenDetails)
 
