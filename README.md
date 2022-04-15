@@ -1,5 +1,5 @@
 # planton
-A NFT game making use of solidity, truffle, ganache and moralis.
+An NFT game making use of solidity, truffle, ganache and moralis.
 
 ![Screenshot from 2022-03-30 01-07-05](https://user-images.githubusercontent.com/67793558/160725793-badc23c4-5720-4718-918a-9d0d7e61d548.png)
 
